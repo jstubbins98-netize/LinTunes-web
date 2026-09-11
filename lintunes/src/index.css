@@ -1,0 +1,181 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-card-border: hsl(var(--card-border));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-popover-border: hsl(var(--popover-border));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-primary-border: hsl(var(--primary-border));
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-secondary-border: hsl(var(--secondary-border));
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-muted-border: hsl(var(--muted-border));
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-accent-border: hsl(var(--accent-border));
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-destructive-border: hsl(var(--destructive-border));
+
+  --font-sans: var(--app-font-sans);
+  --font-serif: var(--app-font-serif);
+  --font-mono: var(--app-font-mono);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+/* LIGHT MODE */
+:root {
+  --button-outline: rgba(0, 0, 0, 0.1);
+  --badge-outline: rgba(0, 0, 0, 0.05);
+
+  --opaque-button-border-intensity: -8;
+
+  --elevate-1: rgba(0, 0, 0, 0.03);
+  --elevate-2: rgba(0, 0, 0, 0.08);
+
+  /* Brushed Aluminum / Warm Gray */
+  --background: 40 10% 95%;
+  /* Vinyl Black */
+  --foreground: 0 0% 10%;
+  
+  --border: 40 8% 82%;
+  
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 10%;
+  --card-border: 40 8% 82%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 10%;
+  --popover-border: 40 8% 82%;
+
+  /* Amber / Orange Accent */
+  --primary: 34 83% 49%;
+  --primary-foreground: 0 0% 10%;
+  --primary-border: 34 83% 40%;
+
+  --secondary: 40 8% 85%;
+  --secondary-foreground: 0 0% 10%;
+  --secondary-border: 40 8% 75%;
+
+  --muted: 40 10% 88%;
+  --muted-foreground: 0 0% 35%;
+  --muted-border: 40 10% 80%;
+
+  /* Darker accent representing physical hardware */
+  --accent: 0 0% 17%;
+  --accent-foreground: 40 10% 95%;
+  --accent-border: 0 0% 10%;
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --destructive-border: 0 84% 50%;
+
+  --input: 40 8% 82%;
+  --ring: 34 83% 49%;
+
+  --app-font-sans: 'DM Sans', sans-serif;
+  --app-font-serif: 'Bricolage Grotesque', serif;
+  --app-font-mono: 'JetBrains Mono', monospace;
+  
+  --radius: 0rem; /* Brutalist/sharp edges for hardware feel */
+  
+  /* Hard brutalist shadows */
+  --shadow-2xs: 2px 2px 0px 0px hsl(0 0% 10%);
+  --shadow-xs: 4px 4px 0px 0px hsl(0 0% 10%);
+  --shadow-sm: 6px 6px 0px 0px hsl(0 0% 10%);
+  --shadow: 8px 8px 0px 0px hsl(0 0% 10%);
+  --shadow-md: 12px 12px 0px 0px hsl(0 0% 10%);
+  --shadow-lg: 16px 16px 0px 0px hsl(0 0% 10%);
+  --shadow-xl: 20px 20px 0px 0px hsl(0 0% 10%);
+  --shadow-2xl: 24px 24px 0px 0px hsl(0 0% 10%);
+}
+
+.dark {
+  --background: 0 0% 10%;
+  --foreground: 40 10% 95%;
+  
+  --border: 0 0% 20%;
+  
+  --card: 0 0% 15%;
+  --card-foreground: 40 10% 95%;
+  --card-border: 0 0% 25%;
+
+  --popover: 0 0% 15%;
+  --popover-foreground: 40 10% 95%;
+  --popover-border: 0 0% 25%;
+
+  --primary: 34 83% 49%;
+  --primary-foreground: 0 0% 10%;
+  --primary-border: 34 83% 40%;
+
+  --secondary: 0 0% 20%;
+  --secondary-foreground: 40 10% 95%;
+  --secondary-border: 0 0% 30%;
+
+  --muted: 0 0% 20%;
+  --muted-foreground: 0 0% 65%;
+  --muted-border: 0 0% 30%;
+
+  --accent: 40 10% 95%;
+  --accent-foreground: 0 0% 10%;
+  --accent-border: 40 10% 85%;
+
+  --destructive: 0 62% 30%;
+  --destructive-foreground: 40 10% 95%;
+
+  --input: 0 0% 20%;
+  --ring: 34 83% 49%;
+  
+  --shadow-2xs: 2px 2px 0px 0px hsl(34 83% 49%);
+  --shadow-xs: 4px 4px 0px 0px hsl(34 83% 49%);
+  --shadow-sm: 6px 6px 0px 0px hsl(34 83% 49%);
+  --shadow: 8px 8px 0px 0px hsl(34 83% 49%);
+  --shadow-md: 12px 12px 0px 0px hsl(34 83% 49%);
+  --shadow-lg: 16px 16px 0px 0px hsl(34 83% 49%);
+  --shadow-xl: 20px 20px 0px 0px hsl(34 83% 49%);
+  --shadow-2xl: 24px 24px 0px 0px hsl(34 83% 49%);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground selection:bg-primary selection:text-primary-foreground;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif tracking-tight;
+  }
+}
